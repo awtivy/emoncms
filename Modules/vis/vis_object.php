@@ -22,6 +22,12 @@
             array('colour',_("colour"),9,'EDC240'),
             )
         ),
+		
+		'realtime2' => array('label'=>_("RealTime2"), 'options'=>array(
+            array('feedid',_("feed"),1),
+            array('colour',_("colour"),9,'EDC240'),
+            )
+        ),
         
         // Hex colour EDC240 is the default color for flot. since we want existing setups to not change, we set the default value to it manually now,
         'rawdata'=> array('label'=>_("RawData"), 'options'=>array(

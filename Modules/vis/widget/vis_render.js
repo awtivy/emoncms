@@ -20,7 +20,7 @@ function vis_widgetlist(){
       "optionstype":["feedid","colour_picker","dropbox"],
       "optionsname":[_Tr("Feed"),_Tr("Colour"),_Tr("Zoom")],
       "optionshint":[_Tr("Feed source"),_Tr("Line colour in hex. Blank is use default."),_Tr("Default visible window interval")],
-      "optionsdata": [ , , [["1", "1 "+_Tr("minute")],["5", "5 "+_Tr("minutes")],["15", "15 "+_Tr("minutes")],["30", "30 "+_Tr("minutes")],["60", "1 "+ _Tr("hour")]] ],
+      "optionsdata": [ , , [["1", "1 "+_Tr("minute")],["5", "5 "+_Tr("minutes")],["15", "15 "+_Tr("minutes")],["30", "30 "+_Tr("minutes")],["60", "1 "+ _Tr("hour")],["480", "8 "+ _Tr("hours")]]],
       "html":""
     },
 

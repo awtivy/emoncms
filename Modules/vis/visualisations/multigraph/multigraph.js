@@ -155,13 +155,13 @@ function vis_feed_data_callback(context,data) {
 function plot() {
   $.plot($("#graph"), plotdata, {
     canvas: true,
-    grid: { show: true, hoverable: true, clickable: true },
-    xaxis: { mode: "time", timezone: "browser", min: view.start, max: view.end },
+    grid: { show: true, hoverable: true, clickable: true, borderWidth:0, labelMargin:0, axisMargin:0, minBorderMargin:0},
+    xaxis: { mode: "time", timezone: "browser", min: view.start, max: view.end, tickLength: 0, ticks: []},
     selection: { mode: "x" },
     legend: { show: showlegend, position: "nw", toggle: true },
     toggle: { scale: "visible" },
     touch: { pan: "x", scale: "x" },
-    yaxis: { min: view.ymin , max: view.ymax},
+    yaxis: { min: view.ymin , max: view.ymax, tickLength: 0, ticks: []},
     y2axis: { min: view.y2min , max: view.y2max}
   });
 }

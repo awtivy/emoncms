@@ -27,12 +27,12 @@
 
     <div id="graph_bound" style="height:400px; width:100%; position:relative; ">
      <div id="graph"></div>
-     <div style="position:absolute; top:20px; right:20px;  opacity:0.5;">
+     <div style="position:absolute; top:20px; right:20px;  opacity:0.01;">
+       <button class="viewWindow" time="43200">12 <?php echo _('hour') ?></button>
+       <button class="viewWindow" time="21600">6 <?php echo _('hour') ?></button>
        <button class="viewWindow" time="3600">1 <?php echo _('hour') ?></button>
        <button class="viewWindow" time="1800">30 <?php echo _('min') ?></button>
-       <button class="viewWindow" time="900">15 <?php echo _('min') ?></button>
        <button class="viewWindow" time="300">5 <?php echo _('min') ?></button>
-       <button class="viewWindow" time="60">1 <?php echo _('min') ?></button>
      </div>
     </div>
 
@@ -52,7 +52,7 @@
     }
 
     var initzoom = urlParams.initzoom;
-    if (initzoom==undefined || initzoom=='' || initzoom < 1) initzoom = '15'; // Initial zoom default to 15 mins
+    if (initzoom==undefined || initzoom=='' || initzoom < 1) initzoom = '480'; // Initial zoom default to 15 mins
 
     var timeWindow = (60*1000*initzoom);        //Initial time window
 
