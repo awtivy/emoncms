@@ -17,11 +17,14 @@ $schema['users'] = array(
     'location'=>array('type'=>'varchar(30)', 'default'=>''),
     'timezone' => array('type'=>'varchar(64)', 'default'=>'UTC'),
     'language' => array('type' => 'varchar(5)', 'default'=>'en_EN'),
-    'bio' => array('type' => 'text', 'default'=>'')
+    'bio' => array('type' => 'text', 'default'=>''),
+    'tags' => array('type' => 'text'),
+    'startingpage' => array('type'=>'varchar(64)', 'default'=>'feed/list')
 );
 
 $schema['rememberme'] = array(
     'userid' => array('type' => 'int(11)'),
     'token' => array('type' => 'varchar(40)'),
+    'persistentToken' => array('type' => 'varchar(40)'),
     'expire' => array('type' => 'datetime')
 );

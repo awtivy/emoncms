@@ -10,11 +10,11 @@ You may need to start by updating the system repositories
 
 on 14.04:
 
-    sudo apt-get install apache2 mysql-server mysql-client php5 libapache2-mod-php5 php5-mysql php5-curl php-pear php5-dev php5-mcrypt php5-json git-core redis-server build-essential ufw ntp
+    sudo apt-get install apache2 mysql-server mysql-client php5 libapache2-mod-php5 php5-mysql php5-curl php-pear php5-dev php5-mcrypt php5-json git-core redis-server build-essential ufw ntp -y
     
 on 16.04:
 
-`sudo apt-get install apache2 mysql-server mysql-client php libapache2-mod-php php-mysql php-curl php-pear php-dev php-mcrypt php-json git-core redis-server build-essential ufw ntp`
+`sudo apt-get install apache2 mysql-server mysql-client php libapache2-mod-php php-mysql php-curl php-pear php-dev php-mcrypt php-json git-core redis-server build-essential ufw ntp -y`
 
 ### Install PHP pecl dependencies
 
@@ -50,6 +50,7 @@ Emoncms uses a front controller to route requests, modrewrite needs to be config
  sudo sh -c "echo '  Order allow,deny' >> /etc/apache2/sites-available/emoncms.conf"
  sudo sh -c "echo '  Allow from all' >> /etc/apache2/sites-available/emoncms.conf"
  sudo sh -c "echo '</Directory>' >> /etc/apache2/sites-available/emoncms.conf"
+ sudo sh -c "echo 'ServerName localhost' >> /etc/apache2/apache2.conf"
  sudo ln -s /etc/apache2/sites-available/emoncms.conf /etc/apache2/sites-enabled/
  sudo a2ensite emoncms
  sudo service apache2 reload
@@ -101,7 +102,7 @@ Exit mysql by:
 
     mysql> exit
     
-### Create data repositories for emoncms feed engine's
+### Create data repositories for emoncms feed engines
 
     sudo mkdir /var/lib/phpfiwa
     sudo mkdir /var/lib/phpfina
